@@ -8,9 +8,12 @@ This is an opensource java framework consisting of cucumber, selenium, and expan
         - objectModel
             - define the location, definition of page object/element model on the "Page Object Model" tab
         - environment
-            - maps the translation of the element to the user input'd value
+            - maps the translation of the element to the user input'd information to the objects looked up in the object model
         - suite
-            - Sui
+            - has 3 tabs defined: 
+                - Setup: defines Test name, Device, Browser, screenshots
+                - Driver: defines the selenium driver to use
+                - Testing: the urls to test
         
         
     

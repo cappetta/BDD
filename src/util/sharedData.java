@@ -19,8 +19,7 @@ public class sharedData {
 	public static final String driverConfigurationSheetName = "Driver";
 	public static final String autConfigurationSheetName = "Testing";
 
-	public static final String envDataSheet = "EnvironmentDataSheet";
-
+	public static final String envDataSheet = "ElementDetails";
 	public static final String pomDataSheet = "Page Object Model";
 
 
@@ -37,7 +36,7 @@ public class sharedData {
 	public static String chomeDriverPath = util.general.ExcelUtility.getValue(driverConfigurationSheetInstance, "Chrome Driver Path");
 	//public static  int maximPageLoadWaitTime = Integer.parseInt(util.general.ExcelUtility.getValue(suitConfigurationSheetInstance, "Maximum time to Wait For a Page to load"));
 	public static int maximPageLoadWaitTime = 5000;
-	public static String environmentUnderTest = util.general.ExcelUtility.getValue(suitConfigurationSheetInstance, "AUT Alias", 1);
+	public static String environmentUnderTest = util.general.ExcelUtility.getValue(suitConfigurationSheetInstance, "Test Name", 1);
 	public static String URLUnderTest = util.general.ExcelUtility.getValue(autConfigurationSheetInstance, environmentUnderTest.trim(), 2);
 	//Equipment: 0 is Browser, 1 is Mobile Device
 	public static int testDevice = util.general.ExcelUtility.getValue(suitConfigurationSheetInstance, "Device", 1).equalsIgnoreCase("Browser") ? 0 : 1;
