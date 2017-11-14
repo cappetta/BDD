@@ -96,12 +96,19 @@ public class SFSteps
 	public void the_user_clicks_on_link_in(String key, String browserInstance) throws Throwable 
 	{
 		WebDriver browser = null;
-		if (browserInstance.trim().equalsIgnoreCase("Browser 1"))
+		if (browserInstance.trim().equalsIgnoreCase("Browser 1")) {
 			browser = sharedData.appInstance1;
-		if (browserInstance.trim().equalsIgnoreCase("Browser 2"))
+			util.general.tools.captureScreenshot ();
+		}
+		if (browserInstance.trim().equalsIgnoreCase("Browser 2")) {
 			browser = sharedData.appInstance2;
-		if (browserInstance.trim().equalsIgnoreCase("Browser 3"))
+			util.general.tools.captureScreenshot ();
+		}
+		if (browserInstance.trim().equalsIgnoreCase("Browser 3")){
 			browser = sharedData.appInstance3;
+			util.general.tools.captureScreenshot ();
+		}
+
 
 		try {
 			browser.findElement(By.linkText(key)).click();
