@@ -11,13 +11,13 @@ public class sharedData {
 	public static WebDriver appInstance2 = null;
 	public static WebDriver appInstance3 = null;
 
-	public static final String suitConfigurationFile = "./TestData/SuitConfiguration.xls";
-	public static final String envConfigurationFile = "./TestData/EnvironmentConfiguration.xls";
-	public static final String elementObjectModelFile = "./TestData/ElementObjectModel.xls";
+	public static final String suitConfigurationFile = "./TestData/suite.xls";
+	public static final String envConfigurationFile = "./TestData/environment.xls";
+	public static final String elementObjectModelFile = "./TestData/objectModel.xls";
 
-	public static final String suitConfigurationSheetName = "SuitProp";
-	public static final String driverConfigurationSheetName = "DriverProp";
-	public static final String autConfigurationSheetName = "AUTProp";
+	public static final String suitConfigurationSheetName = "Setup";
+	public static final String driverConfigurationSheetName = "Driver";
+	public static final String autConfigurationSheetName = "Testing";
 
 	public static final String envDataSheet = "EnvironmentDataSheet";
 
