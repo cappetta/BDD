@@ -1,8 +1,8 @@
-@SFFlow
-Feature: Create a Developer Account inn Sand box
+@SFD
+Feature: Create a SalesForce Developer Account
 Scenario: Create an account with fake Email
 	 Given The user Opened the AUT.
-	 And The user Opened the "Guerrilla Mail" .
+	 And The user Opened "Guerrilla Mail" .
 	 Then the user clicks on "Scramble Address" from "Browser 2" checkbox.
 	 Then the user extracts "e-Mail" from "Browser 2".
 	 Then user enters "E-mail for Registration" from "temp data" in "Browser 1".
