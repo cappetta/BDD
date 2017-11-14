@@ -58,8 +58,8 @@ public class tools {
 		try {
 			identifierType = util.general.ExcelUtility.getValue(sharedData.pomSheetInstance, key ,sharedData.appIdentifierTypePosition);
 			identifierValue = util.general.ExcelUtility.getValue(sharedData.pomSheetInstance, key ,sharedData.appIdentifierValuePosition);
-			System.out.println("identifierType : " + identifierType);
-			System.out.println("identifierValue : " + identifierValue);
+//			System.out.println("identifierType : " + identifierType);
+//			System.out.println("identifierValue : " + identifierValue);
 			return util.general.tools.pointTheElement(identifierType, identifierValue,browser);
 		} catch (Exception e) {
 			return null;
@@ -96,8 +96,8 @@ public class tools {
 		try {
 			identifierType = util.general.ExcelUtility.getValue(sharedData.pomSheetInstance, key ,sharedData.appIdentifierTypePosition);
 			identifierValue = util.general.ExcelUtility.getValue(sharedData.pomSheetInstance, key ,sharedData.appIdentifierValuePosition);
-			System.out.println("identifierType : " + identifierType);
-			System.out.println("identifierValue : " + identifierValue);
+//			System.out.println("identifierType : " + identifierType);
+//			System.out.println("identifierValue : " + identifierValue);
 			return util.general.tools.pointTheElement(identifierType, identifierValue);
 		} catch (Exception e) {
 			return null;
