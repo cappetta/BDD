@@ -26,7 +26,9 @@ jobs:
       - run: wget https://github.com/continuumsecurity/RopeyTasks/blob/master/ropeytasks.jar
       - run: nohup java -jar ropeytasks.jar &
       - run: git clone https://github.com/continuumsecurity/bdd-security.git
-      - run: ls -alrt
+      - run: 
+         name: show contents & running java processes
+         command: pwd; ls -alrt; ls -alrt ./bdd-security; ps -eaf | grep -i java; chmod 755 ./bdd-security/gradlew;
       - run: 
          name: run bdd-security test
          working_directory: ~/bdd-security
