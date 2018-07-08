@@ -28,11 +28,11 @@ jobs:
       - run: git clone https://github.com/continuumsecurity/bdd-security.git
       - run: 
          name: show contents & running java processes
-         command: pwd; ls -alrt; ls -alrt ./bdd-security; ps -eaf | grep -i java; chmod 755 ./bdd-security/gradlew;
+         command: pwd; ls -alrt; ls -alrt ./bdd-security; $(ps -eaf | grep -i java); chmod 755 ./bdd-security/gradlew;
       - run: 
          name: run bdd-security test
          working_directory: ~/bdd-security
-         command: cd ~/bdd-security; ./gradlew -Dcucumber.options="--tags @authentication --tags ~@skip"
+         command: cd ~/bdd-security; pwd; ./bdd-security/gradlew -Dcucumber.options="--tags @authentication --tags ~@skip"
 
       # Download and cache dependencies
 #      - restore_cache:
