@@ -27,9 +27,9 @@ jobs:
       - run: nohup java -jar ropeytasks.jar &
       - run: git clone https://github.com/continuumsecurity/bdd-security.git
       - run: 
-      name: run bdd-security test
-      working_directory: ~/BDD
-      command: ./gradlew -Dcucumber.options="--tags @authentication --tags ~@skip"
+         name: run bdd-security test
+         working_directory: ~/BDD
+         command: ./gradlew -Dcucumber.options="--tags @authentication --tags ~@skip"
 
       # Download and cache dependencies
 #      - restore_cache:
