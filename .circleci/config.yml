@@ -32,7 +32,7 @@ jobs:
       - run: 
          name: run bdd-security test
          working_directory: ~/bdd-security
-         command: cd ~/bdd-security; pwd; ./bdd-security/gradlew -Dcucumber.options="--tags @authentication --tags ~@skip"
+         command: pwd; ./gradlew -Dcucumber.options="--tags @authentication --tags ~@skip"
 
       # Download and cache dependencies
 #      - restore_cache:
