@@ -23,23 +23,27 @@ jobs:
     
     steps:
       - checkout
+      - run: wget https://github.com/continuumsecurity/RopeyTasks/blob/master/ropeytasks.jar
+      - run: nohup java -jar ropeytasks.jar
+      - run: git clone https://github.com/continuumsecurity/bdd-security.git
+      - run: gradlew -Dcucumber.options="--tags @authentication --tags ~@skip"
 
       # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "build.gradle" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+#      - restore_cache:
+#          keys:
+#          - v1-dependencies-{{ checksum "build.gradle" }}
+#          # fallback to using the latest cache if no exact match is found
+#          - v1-dependencies-
 
-      - run: gradle dependencies
+#      - run: gradle dependencies
 
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: v1-dependencies-{{ checksum "build.gradle" }}
+#      - save_cache:
+#          paths:
+#            - ~/.gradle
+#          key: v1-dependencies-{{ checksum "build.gradle" }}
         
       # run tests!
-      - run: gradle test
+#      - run: gradle test
 
 
 
