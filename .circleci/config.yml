@@ -24,7 +24,7 @@ jobs:
     steps:
       - checkout
       - run: wget https://github.com/continuumsecurity/RopeyTasks/blob/master/ropeytasks.jar
-      - run: nohup java -jar ropeytasks.jar
+      - run: nohup java -jar ropeytasks.jar &
       - run: git clone https://github.com/continuumsecurity/bdd-security.git
       - run: gradlew -Dcucumber.options="--tags @authentication --tags ~@skip"
 
